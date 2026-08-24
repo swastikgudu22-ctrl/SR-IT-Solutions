@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | SR IT Solutions</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ================= SIGN UP PAGE ================= */
+
+        .signup-page {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+
+            background:
+                linear-gradient(rgba(5, 20, 45, 0.78), rgba(5, 20, 45, 0.88)),
+                url("images/SR_IT_Solutions_Corporate_Building.jpg.jpeg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .signup-container {
+            width: 100%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        /* LEFT SIDE */
+
+        .signup-info {
+            padding: 40px 35px;
+            background: linear-gradient(135deg, #071a3d, #0878ff);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .signup-info h1 {
+            font-size: 34px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .signup-info h1 span {
+            color: #48a8ff;
+        }
+
+        .signup-info p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .signup-info ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .signup-info li {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        /* RIGHT SIDE */
+
+        .signup-form-box {
+            padding: 50px 45px;
+        }
+
+        .signup-form-box h2 {
+            font-size: 32px;
+            color: #071a3d;
+            margin-bottom: 8px;
+        }
+
+        .signup-form-box .subtitle {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            padding: 13px 14px;
+            border: 1px solid #d5d5d5;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #0878ff;
+            box-shadow: 0 0 0 3px rgba(8, 120, 255, 0.1);
+        }
+
+        .signup-btn {
+            margin-top: 8px;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #0878ff;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .signup-btn:hover {
+            background: #005dcc;
+            transform: translateY(-2px);
+        }
+
+        .login-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .login-text a {
+            color: #0878ff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .signup-container {
+                grid-template-columns: 1fr;
+            }
+
+            .signup-info {
+                padding: 40px 30px;
+            }
+
+            .signup-info h1 {
+                font-size: 32px;
+            }
+
+            .signup-form-box {
+                padding: 40px 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="home.html" class="logo">
+                <img src="images/logo.png.png" alt="SR IT Solutions Logo">
+                <span>SR IT Solutions</span>
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="home.html">Home</a>
+
+                <a href="About.html">About</a>
+
+                <a href="Services.html">Services</a>
+
+                <a href="Projects.html">Projects</a>
+
+                <a href="Team.html">Team</a>
+
+                <a href="Contact.html">Contact</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="signup.html" class="active">Sign Up</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="Contact.html" class="nav-cta">
+                    Get In Touch
+                </a>
+
+                <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SIGN UP ================= -->
+
+    <main class="signup-page">
+
+        <div class="signup-container">
+
+
+            <!-- LEFT INFORMATION -->
+
+            <div class="signup-info">
+
+                <h1>
+                    Join <span>SR IT Solutions</span>
+                </h1>
+
+                <p>
+                    Create your account and become part of
+                    SR IT Solutions. Build, collaborate and
+                    manage your digital journey with us.
+                </p>
+
+                <ul>
+
+                    <li>✓ Secure Account</li>
+
+                    <li>✓ Modern Digital Solutions</li>
+
+                    <li>✓ Easy Access</li>
+
+                    <li>✓ Reliable Technology</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- SIGN UP FORM -->
+
+            <div class="signup-form-box">
+
+                <h2>Create Account</h2>
+
+                <p class="subtitle">
+                    Register your account to get started.
+                </p>
+
+
+                <form class="signup-form" action="#" method="POST">
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+                                First Name
+                            </label>
+
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+                                Last Name
+                            </label>
+
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                            placeholder="Confirm your password" required>
+
+                    </div>
+
+
+                    <button type="submit" class="signup-btn">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+
+                <p class="login-text">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h3>SR IT Solutions</h3>
+
+                <p>
+                    Innovative technology and digital solutions
+                    for a smarter future.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Team.html">Team</a>
+                <a href="Contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>Contact</h4>
+
+                <p>Email: info@sritsolutions.com</p>
+
+                <p>Phone: +91 XXXXX XXXXX</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SR IT Solutions. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js/effect.js"></script>
+
+</body>
+
+</html>

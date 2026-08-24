@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SR IT Solutions</title>
+    <link rel="stylesheet" href="css/style.css?v=latest">
+</head>
+
+<body class="login-page-body">
+    <div class="login-page">
+        <div class="login-panel">
+            <aside class="login-visual" aria-label="SR IT Solutions office background">
+                <div class="login-visual-overlay"></div>
+
+                <div class="login-branding">
+                    <div class="login-brand-logo">
+                        <img src="images/logo.png.png" alt="SR IT Solutions Logo">
+                    </div>
+
+                    <div class="login-brand-copy">
+                        <h1>SR IT Solutions</h1>
+                        <p>Technology &amp; Digital Solutions</p>
+                    </div>
+                </div>
+
+                <div class="login-hero-copy">
+                    <h2>Welcome Back!</h2>
+                    <h3>Glad to see you again</h3>
+                    <span class="login-accent-line"></span>
+                    <p>
+                        Login to access your account and manage your projects,
+                        services and more.
+                    </p>
+                </div>
+
+                <div class="login-trust-badge">
+                    <div class="login-trust-icon">✓</div>
+                    <div class="login-trust-text">
+                        <strong>Secure. Reliable. Innovative.</strong>
+                        <span>SR IT Solutions</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="login-card-wrap">
+                <section class="login-card" aria-label="Login form">
+                    <div class="login-card-header">
+                        <h2>Welcome Back</h2>
+                        <p>Login to your account</p>
+                        <span class="login-card-line"></span>
+                    </div>
+
+                    <form class="login-form" action="#" method="post">
+                        <div class="login-field-group">
+                            <label for="login-email">Email or Username</label>
+                            <div class="login-input-shell">
+                                <span class="login-input-icon" aria-hidden="true">👤</span>
+                                <input id="login-email" type="email" name="email" placeholder="Enter your email or username" autocomplete="username">
+                            </div>
+                        </div>
+
+                        <div class="login-field-group">
+                            <label for="login-password">Password</label>
+                            <div class="login-input-shell login-password-shell">
+                                <span class="login-input-icon" aria-hidden="true">🔒</span>
+                                <input id="login-password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password">
+                                <button type="button" class="login-password-toggle" aria-label="Show password" aria-pressed="false">
+                                    <span class="login-eye-icon" aria-hidden="true">◉</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="login-form-meta">
+                            <label class="login-check-wrap">
+                                <input type="checkbox" name="remember" checked>
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="login-link">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="login-button">
+                            <span class="login-button-icon" aria-hidden="true">→</span>
+                            <span>Login</span>
+                        </button>
+                    </form>
+
+                    <div class="login-divider"><span>OR</span></div>
+
+                    <button type="button" class="login-google-btn" aria-label="Login with Google">
+                        <span class="login-google-mark" aria-hidden="true">G</span>
+                        <span>Login with Google</span>
+                    </button>
+
+                    <p class="login-signup-text">
+                        Don't have an account? <a href="signup.html" class="login-link">Sign Up</a>
+                    </p>
+
+                    <a href="home.html" class="login-home-link">← Back to Home</a>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js/effect.js"></script>
+    <script>
+        const passwordField = document.getElementById('login-password');
+        const toggleButton = document.querySelector('.login-password-toggle');
+
+        if (passwordField && toggleButton) {
+            toggleButton.addEventListener('click', function () {
+                const isHidden = passwordField.type === 'password';
+                passwordField.type = isHidden ? 'text' : 'password';
+                toggleButton.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+                toggleButton.setAttribute('aria-pressed', String(isHidden));
+                toggleButton.classList.toggle('is-visible', isHidden);
+            });
+        }
+    </script>
+</body>
+
+</html>
